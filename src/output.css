@@ -262,6 +262,9 @@
   .mt-10 {
     margin-top: calc(var(--spacing) * 10);
   }
+  .mt-20 {
+    margin-top: calc(var(--spacing) * 20);
+  }
   .mt-auto {
     margin-top: auto;
   }
@@ -279,6 +282,9 @@
   }
   .mb-8 {
     margin-bottom: calc(var(--spacing) * 8);
+  }
+  .mb-10 {
+    margin-bottom: calc(var(--spacing) * 10);
   }
   .mb-12 {
     margin-bottom: calc(var(--spacing) * 12);
@@ -315,6 +321,9 @@
   }
   .h-16 {
     height: calc(var(--spacing) * 16);
+  }
+  .h-64 {
+    height: calc(var(--spacing) * 64);
   }
   .min-h-screen {
     min-height: 100vh;
@@ -430,6 +439,13 @@
       margin-block-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)));
     }
   }
+  .space-y-5 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 5) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 5) * calc(1 - var(--tw-space-y-reverse)));
+    }
+  }
   .rounded {
     border-radius: 0.25rem;
   }
@@ -462,15 +478,6 @@
   .bg-\[\#F6F8FB\] {
     background-color: #F6F8FB;
   }
-  .bg-\[\#FBFAF7\] {
-    background-color: #FBFAF7;
-  }
-  .bg-\[\#bcbab4\] {
-    background-color: #bcbab4;
-  }
-  .bg-\[\#dbdad5\] {
-    background-color: #dbdad5;
-  }
   .bg-\[\#f9f8f4\] {
     background-color: #f9f8f4;
   }
@@ -497,9 +504,6 @@
   }
   .bg-gray-100 {
     background-color: var(--color-gray-100);
-  }
-  .bg-gray-400 {
-    background-color: var(--color-gray-400);
   }
   .bg-green-500 {
     background-color: var(--color-green-500);
@@ -830,6 +834,16 @@
       margin-inline: auto;
     }
   }
+  .md\:mb-14 {
+    @media (width >= 48rem) {
+      margin-bottom: calc(var(--spacing) * 14);
+    }
+  }
+  .md\:h-80 {
+    @media (width >= 48rem) {
+      height: calc(var(--spacing) * 80);
+    }
+  }
   .md\:w-auto {
     @media (width >= 48rem) {
       width: auto;
@@ -868,6 +882,11 @@
   .md\:p-6 {
     @media (width >= 48rem) {
       padding: calc(var(--spacing) * 6);
+    }
+  }
+  .md\:py-20 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 20);
     }
   }
   .md\:text-center {
@@ -978,6 +997,16 @@
   .lg\:items-start {
     @media (width >= 64rem) {
       align-items: flex-start;
+    }
+  }
+  .lg\:justify-start {
+    @media (width >= 64rem) {
+      justify-content: flex-start;
+    }
+  }
+  .lg\:gap-16 {
+    @media (width >= 64rem) {
+      gap: calc(var(--spacing) * 16);
     }
   }
   .lg\:p-12 {
