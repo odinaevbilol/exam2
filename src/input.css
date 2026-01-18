@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+@layer components {
+  .partner-card {
+    @apply
+      bg-white
+      rounded-2xl
+      flex
+      items-center
+      justify-center
+      w-full
+      sm:w-[48%]
+      xl:w-[23%]
+      h-[110px]
+      shadow-md;
+  }
+
+  .partner-card img {
+    @apply
+      max-h-[55px]
+      object-contain;
+  }
+}
